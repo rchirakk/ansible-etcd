@@ -28,6 +28,9 @@ script
     -initial-cluster {{ initial_cluster() }} \
     -initial-cluster-state {{ etcd_initial_cluster_state }} \
     {% endif -%}
+    {% if etcd_proxy != none -%}
+    -proxy {{ etcd_proxy }} \
+    {% endif -%}
     -initial-advertise-peer-urls {{ etcd_initial_advertise_peer_urls }} \
     -advertise-client-urls {{ etcd_advertise_client_urls }} \
     -listen-client-urls {{ etcd_listen_client_urls }} \
