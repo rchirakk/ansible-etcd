@@ -50,3 +50,4 @@ etcd_peer_trusted_ca_file: ~
 
 etcd_discovery: ~
 etcd_discovery_srv: ~
+etcd_proxy: ~
